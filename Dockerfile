@@ -13,7 +13,7 @@ FROM eclipse-temurin:17-jdk-alpine
 
 WORKDIR /app
 
-COPY --from=build /app/target/db-password-generator-1.0.0.jar db-password-generator-1.0.0.jar
+COPY --from=build /app/target/db-password-generator-*.jar db-password-generator.jar
 
 EXPOSE 8080
 
