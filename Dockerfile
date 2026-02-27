@@ -17,4 +17,4 @@ COPY --from=build /app/target/db-password-generator-*.jar db-password-generator.
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "db-password-generator-1.0.0.jar"]
+ENTRYPOINT ["java", "-jar", "db-password-generator.jar"]
