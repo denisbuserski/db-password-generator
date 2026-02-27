@@ -2,6 +2,7 @@ package com.db.password.generator.controller;
 
 
 import com.db.password.generator.service.PasswordService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,15 +14,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/password-generator")
+@RequiredArgsConstructor
 @Slf4j
 public class PasswordController {
-
     private final PasswordService passwordService;
-
-    @Autowired
-    public PasswordController(PasswordService passwordService) {
-        this.passwordService = passwordService;
-    }
 
     @GetMapping("/generate")
     public String showForm() {
