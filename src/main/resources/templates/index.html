@@ -13,13 +13,19 @@
 
             <form th:action="@{/password-generator/generate}"
                   th:method="post">
-                <label for="length">Select Password Length (10–50):</label>
-                <input id="length"
-                       type="number"
-                       name="length"
-                       min="10"
-                       max="50"
-                       required>
+                <label class="main-label" for="length">Select Password Length (10–50):</label>
+
+                <div class="slider-wrapper">
+                    <span id="lengthDisplay" th:text="${length != null ? length : 10} + ' characters'">33 characters</span>
+                    <input id="length"
+                           type="range"
+                           name="length"
+                           min="10"
+                           max="50"
+                           th:value="${length != null ? length : 10}"
+                           oninput="document.getElementById('lengthDisplay').textContent = this.value + ' characters'"
+                           required>
+                </div>
 
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="upper" checked> Include Uppercase</label>
