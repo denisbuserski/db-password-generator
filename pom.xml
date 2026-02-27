@@ -12,7 +12,7 @@
 
 	<groupId>com.db.password.generator</groupId>
 	<artifactId>db-password-generator</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<name>db-password-generator</name>
 	<description>Application for generating passwords</description>
 
@@ -74,6 +74,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>db-password-generator</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
